@@ -12,7 +12,9 @@
     "@slidev/theme-apple-basic": "^0.25.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
-    "vue": "^3.4.21"
+    "chart.js": "^4.4.2",
+    "vue": "^3.4.21",
+    "vue-chartjs": "^5.3.1"
   },
   "devDependencies": {
     "prettier-plugin-slidev": "^1.0.5"

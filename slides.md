@@ -186,13 +186,13 @@ class: my-cool-content-on-the-left
 
 Auth0 is handling the user login, logout
 
-## We track these health indicators
+## The web app track these health indicators
 
-|                         |                                  |
-| ----------------------- | -------------------------------- |
-| <kbd>Happiness</kbd>    | Your perceived happiness in team |
-| <kbd>Productivity</kbd> | percieved productivity in team   |
-| <kbd>Stress</kbd>       | percieved stress in team         |
+|                         |                                                               |
+| ----------------------- | ------------------------------------------------------------- |
+| <kbd>Happiness</kbd>    | Perceived enjoyment of working on this project with this team |
+| <kbd>Productivity</kbd> | Your sense of value that you feel you bring to the project    |
+| <kbd>Stress</kbd>       | Feeling of stress when you work on the project                |
 
 <style>
   .my-cool-content-on-the-left {
@@ -206,6 +206,49 @@ Auth0 is handling the user login, logout
     background-color: black;
   }
 </style>
+
+---
+transition: slide-up
+level: 2
+---
+
+# Core concept
+
+Track wellness over time
+
+<div class="flex justify-center relative w-full">
+  <code class="w-3/5">
+    [
+      <br>
+      { id: 1, name: "Happiness" },
+      <br>
+      { id: 2, name: "Productiviy"},
+      <br>
+      { id: 3, name: "Stress" }
+      <br>
+    ]
+  </code>
+  <div class="w-full h-full">
+    <img
+      v-motion
+      :initial="{ x: 0, opacity: 0, scale: 0.5 }"
+      :click-1="{ x: 145, y: -180, opacity: 1, scale: 0.5, transition: { duration: 600 } }"
+      class="absolute left-0 top-0 z-1 w-full h-auto"
+      src="Screenshot_chart.png"
+      alt=""
+    />
+  </div>
+</div>
+
+---
+
+# Test chart component
+
+<div>
+
+<Chart/>
+
+</div>
 
 ---
 transition: slide-up
@@ -431,8 +474,6 @@ Also, HTML elements are valid:
 
 ---
 
-## class: px-20
-
 # Themes
 
 Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
@@ -496,116 +537,6 @@ also allows you to add
 [Learn More](https://sli.dev/guide/animations#click-animations)
 
 </div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev for Ackman
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Ackman
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-
-$$
-{1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
 
 ---
 
@@ -684,11 +615,6 @@ database "MySql" {
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
 
 ---
 
