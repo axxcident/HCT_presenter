@@ -89,13 +89,59 @@ It's important that members of a team work in an effient way that is also good f
 -->
 
 ---
+transition: slide-up
+level: 2
+---
+
+# Core concept
+
+<div class="flex flex-col justify-center relative w-full">
+  <code class="w-full">
+    [
+      <br>
+      { id: 1, name: "Happiness" },
+      <br>
+      { id: 2, name: "Productiviy"},
+      <br>
+      { id: 3, name: "Stress" }
+      <br>
+    ]
+  </code>
+  <div class="w-full h-full">
+      <div
+        v-motion
+        :initial="{ x: -300, opacity: 0, scale: 0.5 }"
+        :click-1="{ x: 0, y: 130, opacity: 1, scale: 0.9, transition: { duration: 600 } }"
+        class="absolute left-0 top-0 z-1 w-full h-[300px] bg-white opacity-20 rounded-md px-4 mx-4"
+      >
+        <Chart/>
+      </div>
+  </div>
+</div>
+
+<style>
+  .chart-container canvas {
+    background-color: rgba(255, 255, 255, 1); /* White background color */
+  }
+</style>
+
+<!--
+Presenter note with **bold**, *italic*, and ~~striked~~ text.
+
+Also, HTML elements are valid:
+<div class="flex w-full">
+  <span style="flex-grow: 1;">Left content</span>
+  <span>Right content</span>
+</div>
+-->
+
+---
 transition: fade-out
 layout: full
 ---
 
 # The Why?
 
-<!-- ## Health check-in is a tool that is made for you and your team, it consist of the following features: -->
 <h2 class="p-4 mb-3">Health check-in is a tool that is made for you and your team, it consist of the following features:</h2>
     <div
       class="text-4xl absolute top-14 left-40"
@@ -140,11 +186,6 @@ layout: full
 - 🤳 mobile Responsiveness
     </div>
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
-
 <style>
 h1 {
   background-color: #2B90B6;
@@ -155,11 +196,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-
-/* h2 {
-  margin-top: 2rem;
-  padding: 2rem;
-} */
 </style>
 
 <!--
@@ -180,13 +216,17 @@ url: https://health-checkin.vercel.app/
 
 # a custom class name to the content
 class: my-cool-content-on-the-left
+id: my-coolest-id
 ---
+
+<div class="">
 
 # The How
 
-Auth0 is handling the user login, logout
+- `Auth0` handle user authorization
+- `Vercel postgresql` handle user management
 
-## The web app track these health indicators
+#### The web app track these health indicators
 
 |                         |                                                               |
 | ----------------------- | ------------------------------------------------------------- |
@@ -194,11 +234,9 @@ Auth0 is handling the user login, logout
 | <kbd>Productivity</kbd> | Your sense of value that you feel you bring to the project    |
 | <kbd>Stress</kbd>       | Feeling of stress when you work on the project                |
 
-<style>
-  .my-cool-content-on-the-left {
-    margin-right: 50rem;
-  }
+</div>
 
+<style>
   body {
     height: 118%;
     width: 65%;
@@ -206,80 +244,6 @@ Auth0 is handling the user login, logout
     background-color: black;
   }
 </style>
-
----
-transition: slide-up
-level: 2
----
-
-# Core concept
-
-Track wellness over time
-
-<div class="flex justify-center relative w-full">
-  <code class="w-3/5">
-    [
-      <br>
-      { id: 1, name: "Happiness" },
-      <br>
-      { id: 2, name: "Productiviy"},
-      <br>
-      { id: 3, name: "Stress" }
-      <br>
-    ]
-  </code>
-  <div class="w-full h-full">
-    <img
-      v-motion
-      :initial="{ x: 0, opacity: 0, scale: 0.5 }"
-      :click-1="{ x: 145, y: -180, opacity: 1, scale: 0.5, transition: { duration: 600 } }"
-      class="absolute left-0 top-0 z-1 w-full h-auto"
-      src="Screenshot_chart.png"
-      alt=""
-    />
-  </div>
-</div>
-
----
-
-# Test chart component
-
-<div>
-
-<Chart/>
-
-</div>
-
----
-transition: slide-up
-level: 2
-image: mountain.jpg
-layout: image-right
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|                                                    |                             |
-| -------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                | next animation or slide     |
-| <kbd>left</kbd> / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                      | previous slide              |
-| <kbd>down</kbd>                                    | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
 layout: two-cols
@@ -429,77 +393,6 @@ const author = {
 </script>
 ```
 ````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
-<div>
-
-You can use Vue components directly inside your slides.
-
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
-```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
 
