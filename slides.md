@@ -269,7 +269,7 @@ id: test-id
 #bontouch {
   font-weight: 600;
   display: flex;
-  font-size: 2.5rem !important;
+  font-size: 2rem !important;
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #1FA2EA 10%, #146b8c 20%);
   background-size: 100%;
