@@ -1,0 +1,6 @@
+#slideshow {
+  transform: scale(1);
+}
+#test-id > div > #frame {
+  width: 50%;
+}
