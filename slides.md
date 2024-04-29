@@ -41,7 +41,7 @@ Your teams primary tool to track work health
         :initial="{ y: -700, x: 0, scale: 0.9 }"
         :click-1="{ y: -100, x: 0, scale: 0.7, transition: { duration: 1000 } }"
         class="absolute inset-0 z-20"
-        src="heart.png"
+        src="/heart.png"
         alt=""
       />
       <LightOrDark>
@@ -51,7 +51,7 @@ Your teams primary tool to track work health
             :initial="{ x: -57, opacity: 0, scale: 0.7 }"
             :click-1="{ x: -57, y: 70, opacity: 1, scale: 0.4, transition: { duration: 1200 } }"
             class="absolute inset-0 z-0"
-            src="Heartground_black.svg"
+            src="/Heartground_black.svg"
             alt=""
           />
         </template>
@@ -61,7 +61,7 @@ Your teams primary tool to track work health
             :initial="{ x: -57, opacity: 0, scale: 0.9 }"
             :click-1="{ x: -57, y: 70, opacity: 1, scale: 0.5, transition: { duration: 1200 } }"
             class="absolute inset-0 z-1"
-            src="heartground_white.svg"
+            src="/heartground_white.svg"
             alt=""
           />
         </template>
@@ -261,7 +261,7 @@ id: test-id
     </div>
   </div>
   <div class="w-[55%] h-[100%]">
-    <img src="GH_Issues.png" alt="" class="rounded-md" />
+    <img src="/GH_Issues.png" alt="" class="rounded-md" />
   </div>
 </article>
 
@@ -269,7 +269,7 @@ id: test-id
 #bontouch {
   font-weight: 600;
   display: flex;
-  font-size: 8rem !important;
+  font-size: 2.5rem !important;
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #1FA2EA 10%, #146b8c 20%);
   background-size: 100%;

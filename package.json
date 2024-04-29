@@ -3,7 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --base /HCT_presenter/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
