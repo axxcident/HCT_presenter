@@ -224,228 +224,67 @@ id: my-coolest-id
 
 - `Auth0` handles:
 
-  - user authorization
+  - User authorization
   - Security
 
 - `Vercel PostgreSQL` handles:
 
-  - user data
-  - team data
+  - User data
+  - Team data
   - Session data
 
 </div>
 
 ---
 layout: iframe
+---
 
 # the web page source
+
 url: http://localhost:3000/user-dashboard/de2412d0-6049-40d8-84d3-1b97da83fa66
 id: test-id
----
-
-<article></article>
 
 ---
-layout: image-right
-image: mountain.jpg
----
 
-# Code
+# Github issues
 
-Use code snippets and get the highlighting directly, and even types hover![^1]
+<article class="flex justify-between">
+  <div>
+    <p class="">Repository is owned by <h2 id="bontouch"> Bontouch</h2></p>
+    <span>Potential <strong>improvements</strong> & <i>bugs</i></span>
+    <div>
+      <ul>
+        <li v-click class="py-2 pt-4">Designate <span class="underline">name</span> and <span class="underline">purpose</span> to Sessions</li>
+        <li v-click class="py-2">Create own factors, <code>emotional security</code></li>
+        <li v-click class="py-2">Anonymity</li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-[55%] h-[100%]">
+    <img src="GH_Issues.png" alt="" class="rounded-md" />
+  </div>
+</article>
 
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from "vue";
-
-const count = ref(0);
-const doubled = computed(() => count.value * 2);
-
-doubled.value = 2;
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<!-- Inline style -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+#bontouch {
+  font-weight: 600;
+  display: flex;
+  font-size: 8rem !important;
+  background-color: #2B90B6;
+  background-image: linear-gradient(45deg, #1FA2EA 10%, #146b8c 20%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 </style>
-
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-
-## level: 2
-
-# Shiki Magic Move
-
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
-
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: "John Doe",
-  books: [
-    "Vue 2 - Advanced Guide",
-    "Vue 3 - Basic Guide",
-    "Vue 4 - The Mystery",
-  ],
-});
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: "John Doe",
-        books: [
-          "Vue 2 - Advanced Guide",
-          "Vue 3 - Basic Guide",
-          "Vue 4 - The Mystery",
-        ],
-      },
-    };
-  },
-};
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: "John Doe",
-      books: [
-        "Vue 2 - Advanced Guide",
-        "Vue 3 - Basic Guide",
-        "Vue 4 - The Mystery",
-      ],
-    },
-  }),
-};
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: "John Doe",
-  books: [
-    "Vue 2 - Advanced Guide",
-    "Vue 3 - Basic Guide",
-    "Vue 4 - The Mystery",
-  ],
-};
-</script>
-```
-````
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animations)
-
-</div>
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from "vue";
-import hello from "./external";
-
-const code = ref(hello());
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from "vue";
-
-function fibonacci(n: number): number {
-  return n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2); // you know, this is NOT the best way to do it :P
-}
-
-console.log(
-  version,
-  Array.from({ length: 10 }, (_, i) => fibonacci(i + 1)),
-);
-```
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# Thank You
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+[Notion](https://www.notion.so/bontouch/Web-intern-project-Team-health-checkin-9acd5e321c684bf38e5386e1f8a2d2dc) · [GitHub](https://github.com/bontouch/health-checkin) · [Website](https://health-checkin.vercel.app)
