@@ -141,7 +141,7 @@ layout: full
 
 # The Why?
 
-<h2 class="p-4 mb-3">Health check-in is a tool that is made for you and your team, it consist of the following features:</h2>
+<h2 class="p-4 mb-3">Health check-in is a tool that is made for you and your team, This is what it offers:</h2>
     <div
       class="text-4xl absolute top-14 left-40"
       v-motion
@@ -218,31 +218,32 @@ class: my-cool-content-on-the-left
 id: my-coolest-id
 ---
 
-<div class="">
-
 # The How
 
-- `Auth0` handles:
-
-  - User authorization
-  - Security
-
-- `Vercel PostgreSQL` handles:
-
-  - User data
-  - Team data
-  - Session data
-
-</div>
+<ul v-click>
+  <code>Next.js</code>
+  <li>Running on server</li>
+  <li>Hosted on Vercel</li>
+  <li>Typescript</li>
+</ul>
+<ul v-click>
+  <code>Auth0</code>
+  <li>User authorization</li>
+  <li>Security</li>
+</ul>
+<ul v-click>
+  <code>Vercel PostgreSQL</code>
+  <li>User data</li>
+  <li>Team data</li>
+  <li>Session data</li>
+</ul>
 
 ---
 layout: iframe
----
-
-# the web page source
-
 url: http://localhost:3000/user-dashboard/de2412d0-6049-40d8-84d3-1b97da83fa66
 id: test-id
+# the web page source
+---
 
 ---
 
@@ -255,7 +256,7 @@ id: test-id
     <div>
       <ul>
         <li v-click class="py-2 pt-4">Designate <span class="underline">name</span> and <span class="underline">purpose</span> to Sessions</li>
-        <li v-click class="py-2">Create own factors, <code>emotional security</code></li>
+        <li v-click class="py-2">Create own KPI, <code>emotional security</code>?</li>
         <li v-click class="py-2">Anonymity</li>
       </ul>
     </div>
@@ -269,7 +270,7 @@ id: test-id
 #bontouch {
   font-weight: 600;
   display: flex;
-  font-size: 2rem !important;
+  font-size: 2rem;
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #1FA2EA 10%, #146b8c 20%);
   background-size: 100%;

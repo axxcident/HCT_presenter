@@ -1,1 +1,0 @@
-import{o as t,b as o,f as s}from"../modules/vue-BjrCXWg9.js";import{b as n}from"../index-Dx5_U4Q7.js";const r={},l={class:"slidev-layout default"};function a(e,c){return t(),o("div",l,[s(e.$slots,"default")])}const f=n(r,[["render",a],["__file","C:/Dokument/HCT_presenter/node_modules/@slidev/client/layouts/default.vue"]]);export{f as I};
