@@ -239,11 +239,16 @@ id: my-coolest-id
 </ul>
 
 ---
-layout: iframe
+layout: center
 url: http://localhost:3000/user-dashboard/de2412d0-6049-40d8-84d3-1b97da83fa66
 id: test-id
 # the web page source
+class: text-center
 ---
+
+# Bontour
+
+[Health Check-in App](https://health-checkin.vercel.app/)
 
 ---
 
