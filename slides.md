@@ -136,6 +136,21 @@ Also, HTML elements are valid:
 
 ---
 transition: fade-out
+layout: center
+class: text-center
+---
+
+# Poll 1
+
+<div class="w-full h-1/2 flex justify-center items-center">
+  <img
+  class="w-1/3 h-1/3"
+  src="/qr-code.svg"
+  alt="QR code to poll 1" />
+</div>
+
+---
+transition: fade-out
 layout: full
 ---
 
@@ -285,6 +300,21 @@ class: text-center
   -moz-text-fill-color: transparent;
 }
 </style>
+
+---
+transition: fade-out
+layout: center
+class: text-center
+---
+
+# Poll 2
+
+<div class="w-full h-1/2 flex justify-center items-center">
+  <img
+  class="w-1/3 h-1/3"
+  src="/qr-code2.svg"
+  alt="QR code to poll 2" />
+</div>
 
 ---
 layout: center
