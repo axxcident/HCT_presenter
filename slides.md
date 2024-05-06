@@ -139,7 +139,7 @@ transition: fade-out
 layout: full
 ---
 
-# The Why?
+# What is ❤️ App offering??
 
 <h2 class="p-4 mb-3">Health check-in is a tool that is made for you and your team, This is what it offers:</h2>
     <div
