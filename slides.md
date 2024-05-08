@@ -136,21 +136,6 @@ Also, HTML elements are valid:
 
 ---
 transition: fade-out
-layout: center
-class: text-center
----
-
-# Poll 1
-
-<div class="w-full h-1/2 flex justify-center items-center">
-  <img
-  class="w-1/3 h-1/3"
-  src="/qr-code.svg"
-  alt="QR code to poll 1" />
-</div>
-
----
-transition: fade-out
 layout: full
 ---
 
@@ -222,15 +207,21 @@ h1 {
 -->
 
 ---
+layout: center
+url: http://localhost:3000/user-dashboard/de2412d0-6049-40d8-84d3-1b97da83fa66
+id: test-id
+# the web page source
+class: text-center
+---
+
+# Bontour
+
+[Health Check-in App](https://health-checkin.vercel.app/)
+
+---
 layout: iframe-right
 backgroundSize: 5em 20%
-
-# the web page source
 url: https://health-checkin.vercel.app/
-
-# a custom class name to the content
-class: my-cool-content-on-the-left
-id: my-coolest-id
 ---
 
 # The How
@@ -252,18 +243,6 @@ id: my-coolest-id
   <li>Team data</li>
   <li>Session data</li>
 </ul>
-
----
-layout: center
-url: http://localhost:3000/user-dashboard/de2412d0-6049-40d8-84d3-1b97da83fa66
-id: test-id
-# the web page source
-class: text-center
----
-
-# Bontour
-
-[Health Check-in App](https://health-checkin.vercel.app/)
 
 ---
 
@@ -300,21 +279,6 @@ class: text-center
   -moz-text-fill-color: transparent;
 }
 </style>
-
----
-transition: fade-out
-layout: center
-class: text-center
----
-
-# Poll 2
-
-<div class="w-full h-1/2 flex justify-center items-center">
-  <img
-  class="w-1/3 h-1/3"
-  src="/qr-code2.svg"
-  alt="QR code to poll 2" />
-</div>
 
 ---
 layout: center
